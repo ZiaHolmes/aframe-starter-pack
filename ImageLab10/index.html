@@ -6,7 +6,7 @@
   <body>
     <a-scene>
   <a-assets>
-    <img id="skyTexture" src="unsplash-equirec.jpg">
+    <img id="skyTexture" src="unsplash-equirecphot.png">
     <img id="dolphinTexture" src="marbletext-small.jpg">
     <img id="boatTexture" src="boattext-small.jpg">
   </a-assets>
@@ -22,14 +22,11 @@
 
 //dolphin
 <a-entity id="dolphin" position="-4 -1 -6">
-
   <a-sphere radius="0.5" scale="1.6 0.6 0.6" src="#dolphinTexture"></a-sphere>
   <a-cone position="-1 0 0" rotation="0 0 90"
           radius-bottom="0.12" radius-top="0.05" height="0.4" src="#dolphinTexture"></a-cone>
-
   <a-cone position="0.05 0.35 0" rotation="0 0 -20" scale="1 1 0.3"
           radius-bottom="0.15" radius-top="0" height="0.4" src="#dolphinTexture"></a-cone>
-
   <a-triangle vertex-a="0.75 0 0" vertex-b="1.2 0 0.4" vertex-c="1.2 0 -0.4"
               src="#dolphinTexture" side="double"></a-triangle>
   <a-sphere position="-0.6 0.08 0.19" radius="0.04" color="#000000"></a-sphere>

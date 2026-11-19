@@ -5,11 +5,147 @@
   </head>
   <body>
     <a-scene>
-      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-      <a-sky color="#ECECEC"></a-sky>
-    </a-scene>
+  <a-assets>
+    <img id="skyTexture" src="snowscape.jpeg">
+    <a-asset-item id="houseModel" src="PUSHILIN_house.obj"></a-asset-item>
+    <a-asset-item id="houseMtl" src="PUSHILIN_house.mtl"></a-asset-item>
+    <a-asset-item id="rabbitModel" src="Rabbit_01(1).obj"></a-asset-item>
+    <a-asset-item id="rabbitMtl" src="Rabbit_01.mtl"></a-asset-item>
+  </a-assets>
+
+
+  //house
+<a-entity id="house" position="4 2.23 -12" rotation="0 270 0" scale="5 5 5"
+          obj-model="obj: #houseModel; mtl: #houseMtl">
+</a-entity>
+
+//rabbits (in front of the snowman)
+<a-entity id="rabbit1" position="3.4 -1 -5.8" rotation="0 -30 0">
+  <a-entity obj-model="obj: #rabbitModel; mtl: #rabbitMtl" rotation="-90 0 0" scale="0.003 0.003 0.003"></a-entity>
+</a-entity>
+<a-entity id="rabbit2" position="5.8 -1 -4.6" rotation="0 90 0">
+  <a-entity obj-model="obj: #rabbitModel; mtl: #rabbitMtl" rotation="-90 0 0" scale="0.003 0.003 0.003"></a-entity>
+</a-entity>
+<a-entity id="rabbit3" position="8 -1 -3" rotation="0 200 0">
+  <a-entity obj-model="obj: #rabbitModel; mtl: #rabbitMtl" rotation="-90 0 0" scale="0.003 0.003 0.003"></a-entity>
+</a-entity>
+
+//tree
+<a-entity id="tree" position="-4 -1 -6">
+  <!-- trunk -->
+  <a-cylinder position="0 0.5 0" radius="0.25" height="1" color="#5c3a1e"></a-cylinder>
+  <!-- green layers -->
+  <a-cone position="0 1.6 0" radius-bottom="1.5" radius-top="0" height="2" color="#1e5a32"></a-cone>
+  <a-cone position="0 2.6 0" radius-bottom="1.1" radius-top="0" height="1.6" color="#1e5a32"></a-cone>
+  <a-cone position="0 3.4 0" radius-bottom="0.7" radius-top="0" height="1.2" color="#1e5a32"></a-cone>
+  <!-- snow caps -->
+  <a-cone position="0 2 0" radius-bottom="1.5" radius-top="0" height="2" color="white"></a-cone>
+  <a-cone position="0 3 0" radius-bottom="1.1" radius-top="0" height="1.6" color="white"></a-cone>
+  <a-cone position="0 3.8 0" radius-bottom="0.7" radius-top="0" height="1.2" color="white"></a-cone>
+</a-entity>
+
+<a-entity id="tree2" position="8 -1 -6" scale="1 1 1">
+  <!-- trunk -->
+  <a-cylinder position="0 0.5 0" radius="0.25" height="1" color="#5c3a1e"></a-cylinder>
+  <!-- green layers -->
+  <a-cone position="0 1.6 0" radius-bottom="1.5" radius-top="0" height="2" color="#1e5a32"></a-cone>
+  <a-cone position="0 2.6 0" radius-bottom="1.1" radius-top="0" height="1.6" color="#1e5a32"></a-cone>
+  <a-cone position="0 3.4 0" radius-bottom="0.7" radius-top="0" height="1.2" color="#1e5a32"></a-cone>
+  <!-- snow caps -->
+  <a-cone position="0 2 0" radius-bottom="1.5" radius-top="0" height="2" color="white"></a-cone>
+  <a-cone position="0 3 0" radius-bottom="1.1" radius-top="0" height="1.6" color="white"></a-cone>
+  <a-cone position="0 3.8 0" radius-bottom="0.7" radius-top="0" height="1.2" color="white"></a-cone>
+</a-entity>
+
+<a-entity id="tree3" position="-9 -1 -12" scale="1.3 1.3 1.3">
+  <!-- trunk -->
+  <a-cylinder position="0 0.5 0" radius="0.25" height="1" color="#5c3a1e"></a-cylinder>
+  <!-- green layers -->
+  <a-cone position="0 1.6 0" radius-bottom="1.5" radius-top="0" height="2" color="#1e5a32"></a-cone>
+  <a-cone position="0 2.6 0" radius-bottom="1.1" radius-top="0" height="1.6" color="#1e5a32"></a-cone>
+  <a-cone position="0 3.4 0" radius-bottom="0.7" radius-top="0" height="1.2" color="#1e5a32"></a-cone>
+  <!-- snow caps -->
+  <a-cone position="0 2 0" radius-bottom="1.5" radius-top="0" height="2" color="white"></a-cone>
+  <a-cone position="0 3 0" radius-bottom="1.1" radius-top="0" height="1.6" color="white"></a-cone>
+  <a-cone position="0 3.8 0" radius-bottom="0.7" radius-top="0" height="1.2" color="white"></a-cone>
+</a-entity>
+
+<a-entity id="tree4" position="11 -1 -16" scale="1.2 1.2 1.2">
+  <!-- trunk -->
+  <a-cylinder position="0 0.5 0" radius="0.25" height="1" color="#5c3a1e"></a-cylinder>
+  <!-- green layers -->
+  <a-cone position="0 1.6 0" radius-bottom="1.5" radius-top="0" height="2" color="#1e5a32"></a-cone>
+  <a-cone position="0 2.6 0" radius-bottom="1.1" radius-top="0" height="1.6" color="#1e5a32"></a-cone>
+  <a-cone position="0 3.4 0" radius-bottom="0.7" radius-top="0" height="1.2" color="#1e5a32"></a-cone>
+  <!-- snow caps -->
+  <a-cone position="0 2 0" radius-bottom="1.5" radius-top="0" height="2" color="white"></a-cone>
+  <a-cone position="0 3 0" radius-bottom="1.1" radius-top="0" height="1.6" color="white"></a-cone>
+  <a-cone position="0 3.8 0" radius-bottom="0.7" radius-top="0" height="1.2" color="white"></a-cone>
+</a-entity>
+
+<a-entity id="tree5" position="-3 -1 -18" scale="1.4 1.4 1.4">
+  <!-- trunk -->
+  <a-cylinder position="0 0.5 0" radius="0.25" height="1" color="#5c3a1e"></a-cylinder>
+  <!-- green layers -->
+  <a-cone position="0 1.6 0" radius-bottom="1.5" radius-top="0" height="2" color="#1e5a32"></a-cone>
+  <a-cone position="0 2.6 0" radius-bottom="1.1" radius-top="0" height="1.6" color="#1e5a32"></a-cone>
+  <a-cone position="0 3.4 0" radius-bottom="0.7" radius-top="0" height="1.2" color="#1e5a32"></a-cone>
+  <!-- snow caps -->
+  <a-cone position="0 2 0" radius-bottom="1.5" radius-top="0" height="2" color="white"></a-cone>
+  <a-cone position="0 3 0" radius-bottom="1.1" radius-top="0" height="1.6" color="white"></a-cone>
+  <a-cone position="0 3.8 0" radius-bottom="0.7" radius-top="0" height="1.2" color="white"></a-cone>
+</a-entity>
+
+<a-entity id="tree6" position="-12 -1 -4" scale="0.9 0.9 0.9">
+  <!-- trunk -->
+  <a-cylinder position="0 0.5 0" radius="0.25" height="1" color="#5c3a1e"></a-cylinder>
+  <!-- green layers -->
+  <a-cone position="0 1.6 0" radius-bottom="1.5" radius-top="0" height="2" color="#1e5a32"></a-cone>
+  <a-cone position="0 2.6 0" radius-bottom="1.1" radius-top="0" height="1.6" color="#1e5a32"></a-cone>
+  <a-cone position="0 3.4 0" radius-bottom="0.7" radius-top="0" height="1.2" color="#1e5a32"></a-cone>
+  <!-- snow caps -->
+  <a-cone position="0 2 0" radius-bottom="1.5" radius-top="0" height="2" color="white"></a-cone>
+  <a-cone position="0 3 0" radius-bottom="1.1" radius-top="0" height="1.6" color="white"></a-cone>
+  <a-cone position="0 3.8 0" radius-bottom="0.7" radius-top="0" height="1.2" color="white"></a-cone>
+</a-entity>
+
+<a-entity id="tree7" position="6 -1 -22" scale="1.5 1.5 1.5">
+  <!-- trunk -->
+  <a-cylinder position="0 0.5 0" radius="0.25" height="1" color="#5c3a1e"></a-cylinder>
+  <!-- green layers -->
+  <a-cone position="0 1.6 0" radius-bottom="1.5" radius-top="0" height="2" color="#1e5a32"></a-cone>
+  <a-cone position="0 2.6 0" radius-bottom="1.1" radius-top="0" height="1.6" color="#1e5a32"></a-cone>
+  <a-cone position="0 3.4 0" radius-bottom="0.7" radius-top="0" height="1.2" color="#1e5a32"></a-cone>
+  <!-- snow caps -->
+  <a-cone position="0 2 0" radius-bottom="1.5" radius-top="0" height="2" color="white"></a-cone>
+  <a-cone position="0 3 0" radius-bottom="1.1" radius-top="0" height="1.6" color="white"></a-cone>
+  <a-cone position="0 3.8 0" radius-bottom="0.7" radius-top="0" height="1.2" color="white"></a-cone>
+</a-entity>
+
+//snowman
+<a-entity id="dolphin" position="6 -1 -3.75" scale="0.75 0.75 0.75">
+      <a-sphere position="0 3.2 -5" radius=".5" color="white"></a-sphere>
+      <a-sphere position="0 2.3 -5" radius=".75" color="white"></a-sphere>
+      <a-sphere position="0 1 -5" radius="1" color="white"></a-sphere>
+
+      <a-sphere position="0 1.5 -4.1" radius=".1" color="black"></a-sphere>
+      <a-sphere position="0 2.1 -4.3" radius=".1" color="black"></a-sphere>
+      <a-sphere position="0 2.5 -4.3" radius=".1" color="black"></a-sphere>
+
+      <a-sphere position="-.2 3.2 -4.55" radius=".07" color="black"></a-sphere>
+      <a-sphere position=".2 3.2 -4.55" radius=".07" color="black"></a-sphere>
+
+      <a-triangle color="orange" position="-.2 3.2 -4.5" vertex-a="0.2 0 0" vertex-b="0.15 -0.1 0" vertex-c="0.4 -0.2 0"></a-triangle>
+
+      <a-cylinder color="black" position="0 3.8 -5" height="0.4" radius="0.2"></a-cylinder>
+      <a-cylinder color="black" position="0 3.65 -5" height="0.01" radius="0.5"></a-cylinder>
+</a-entity>
+
+  <a-light type="ambient" color="#ffffff" intensity="0.6"></a-light>
+  <a-light type="directional" color="#ffffff" intensity="0.8" position="-1 2 1"></a-light>
+
+  <a-sky src="#skyTexture"></a-sky>
+</a-scene>
+
   </body>
 </html>
